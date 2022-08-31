@@ -1,45 +1,24 @@
-Choose ONE of the following tasks.
-Please do not invest more than 2-4 hours on this.
-Upload your results to a Github repo, for easier sharing and reviewing.
+Hi, I hope you are doing good.
 
-Thank you and good luck!
+I select the second task and reivew and rewrite a code little bit. However, due to
+shortage of my time and my busy schedule I did not write and review code in depth.
 
+#Good points in code:
+1) Code is following a repository pattern which is very good to manage code.
+2) Function names and variable names are proper. Which makes code easy to read.
 
+#Things needs to improve
+1)	Unnecessary Variables (like return $user = UserMeta::where('user_id', $user_id)->first()->$key; ) No need of $user here.
+2)	Unreachable codes (like code after return statements).
+3)	If conditions not properly structured. (like in function willExpireAt).
+4)  Too many redundant code. We can use short methods like using relationships, by breaking
+    code into small functions.
+5) Laravel Functions are not utilize like upateOrCreate, firstOrCreate.
+6) In code base repository class in defined by not utilized properly, like validations methods
+    are not in use in this code.
 
-Code to refactor
-=================
-1) app/Http/Controllers/BookingController.php
-2) app/Repository/BookingRepository.php
-
-Code to write tests
-=====================
-3) App/Helpers/TeHelper.php method willExpireAt
-4) App/Repository/UserRepository.php, method createOrUpdate
-
-
-----------------------------
-
-What I expect in your repo:
-
-X. A readme with:   Your thoughts about the code. What makes it amazing code. Or what makes it ok code. Or what makes it terrible code. How would you have done it. Thoughts on formatting, structure, logic.. The more details that you can provide about the code (what's terrible about it or/and what is good about it) the easier for us to assess your coding style, mentality etc
-
-And 
-
-Y.  Refactor it if you feel it needs refactoring. The more love you put into it. The easier for us to asses your thoughts, code principles etc
-
-
-IMPORTANT: Make two commits. First commit with original code. Second with your refactor so we can easily trace changes. 
-
-
-NB: you do not need to set up the code on local and make the web app run. It will not run as its not a complete web app. This is purely to assess you thoughts about code, formatting, logic etc
-
-
-===== So expected output is a GitHub link with either =====
-
-1. Readme described above (point X above) + refactored code 
-OR
-2. Readme described above (point X above) + a unit test of the code that we have sent
-
-Thank you!
-
-
+#Performance Issues
+1) Unnecessary if else and too much use loops, which slow down the code execution speed.
+2) Unncessary Variable declarations (Memory management is not good).
+3) Lazy loading approach is used, There must be eager loading while fetching data from relations.
+4) Laravel builtin and Eloquent functions should be there instead of loops.
